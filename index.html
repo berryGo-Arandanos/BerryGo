@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berry Go - Arándanos Frescos</title>
+    
+    <!-- Librería de Iconos (FontAwesome) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="berry.css">
+    <!-- Librería de Estilos (Tailwind CSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CONFIGURACIÓN DE COLORES (Importante) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        berryBlue: '#1E3A8A', /* Azul Berry */
+                        berryRed: '#EF4444',  /* Rojo Energía */
+                        berryGreen: '#10B981', /* Verde Salud */
+                    }
+                }
+            }
+        }
+    </script>
+
+  
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ========================================= -->
+    <!--           SECCIÓN HTML (ESTRUCTURA)       -->
+    <!-- ========================================= -->
+
+    <!-- HEADER (Navegación) -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="text-berryBlue text-2xl">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="text-2xl font-bold text-berryBlue tracking-tight">
+                    Berry Go
+                </div>
+            </div>
+            
+            <!-- Botón de acción (Visible siempre) -->
+            <a href="https://wa.me/573103285950?text=Hola,%20quiero%20pedir%20arándanos%20Berry%20Go" target="_blank" 
+               class="bg-berryGreen hover:bg-green-600 text-white font-semibold py-2 px-5 rounded-full transition duration-300 shadow-md flex items-center gap-2 transform active:scale-95">
+               <i class="fab fa-whatsapp"></i> 
+               <span>Pedir</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Portada) -->
+    <section class="relative pt-28 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-4 text-center relative z-10 fade-in-section is-visible">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-berryBlue text-sm font-bold mb-4 border border-blue-100">
+                🌱 Frescura garantizada
+            </span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-berryBlue mb-6 leading-tight">
+                Arándanos frescos,<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-berryBlue to-purple-600">listos para ti.</span>
+            </h1>
+            <h2 class="text-lg md:text-2xl text-gray-500 mb-10 font-light max-w-2xl mx-auto">
+                Calidad premium seleccionada a mano para tu día a día. <br class="hidden md:inline">Del campo a tu casa en Bogotá.
+            </h2>
+            
+            <!-- Botón Principal -->
+            <div class="mb-12">
+                <a href="https://wa.me/573103285950?text=Hola,%20quiero%20hacer%20un%20pedido" target="_blank"
+                   class="inline-flex items-center justify-center bg-berryGreen hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-green-200/50 transform hover:-translate-y-1 transition duration-300">
+                   <i class="fab fa-whatsapp mr-3 text-2xl"></i> 
+                   Pedir por WhatsApp
+                </a>
+                <p class="mt-3 text-xs text-gray-400">Respuesta rápida sin formularios</p>
+            </div>
+
+            <!-- Imagen Hero -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto border-4 border-white">
+                <img src="arhojas.png" 
+                     alt="Arándanos frescos Berry Go" 
+                     class="w-full h-64 md:h-[500px] object-cover hover:scale-105 transition duration-700 ease-in-out">
+            </div>
+        </div>
+        
+        <!-- Elemento decorativo de fondo -->
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-50/50 to-transparent -z-10"></div>
+    </section>
+
+    <!-- CARACTERÍSTICAS (Iconos) -->
+    <section class="py-16 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center fade-in-section">
+                <!-- Item 1 -->
+                <div class="group p-4">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-50 text-berryBlue flex items-center justify-center mx-auto mb-4 text-2xl group-hover:bg-berryBlue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">Seleccionados</h3>
+                    <p class="text-sm text-gray-500 mt-1">Solo fruta premium</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="group p-4">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-50 text-berryBlue flex items-center justify-center mx-auto mb-4 text-2xl group-hover:bg-berryBlue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">Prácticos</h3>
+                    <p class="text-sm text-gray-500 mt-1">Listos para comer</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="group p-4">
+                    <div class="w-16 h-16 rounded-2xl bg-green-50 text-berryGreen flex items-center justify-center mx-auto mb-4 text-2xl group-hover:bg-berryGreen group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">100% Naturales</h3>
+                    <p class="text-sm text-gray-500 mt-1">Sin conservantes</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="group p-4">
+                    <div class="w-16 h-16 rounded-2xl bg-red-50 text-berryRed flex items-center justify-center mx-auto mb-4 text-2xl group-hover:bg-berryRed group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">Rápidos</h3>
+                    <p class="text-sm text-gray-500 mt-1">Envíos en Bogotá</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: NOSOTROS (Misión, Visión, Esencia) -->
+    <section class="py-20 bg-white relative overflow-hidden border-b border-gray-100">
+        <!-- Decoración fondo -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-green-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            
+            <!-- Encabezado de Sección -->
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-berryGreen font-bold tracking-widest uppercase text-sm">Nuestra Esencia</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-berryBlue mt-2 mb-6">Más que solo fruta</h2>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-2xl text-gray-500 font-light italic">
+                        "Salud sin complicaciones."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grid Principal (Quiénes somos y Propósito) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in-section">
+                <!-- Textos -->
+                <div class="space-y-8">
+                    <!-- Quiénes somos -->
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition duration-300">
+                        <div class="w-12 h-12 bg-berryBlue text-white rounded-xl flex items-center justify-center mb-4 text-xl shadow-md">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-berryBlue mb-3">¿Quiénes somos?</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Berry Go es una marca enfocada en la venta de arándanos frescos y productos saludables. Estamos pensados para personas y negocios que buscan <strong>calidad, practicidad y bienestar</strong> en su alimentación diaria, sin complicaciones.
+                        </p>
+                    </div>
+
+                    <!-- Para qué -->
+                    <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100 hover:shadow-lg transition duration-300">
+                        <div class="w-12 h-12 bg-berryGreen text-white rounded-xl flex items-center justify-center mb-4 text-xl shadow-md">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-berryBlue mb-3">¿Para qué existimos?</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            No somos solo vendedores de fruta. Existimos para ser tu opción rápida y confiable para comer mejor. Queremos eliminar la fricción entre tú y una vida saludable. <strong>Hacemos lo saludable, fácil.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Imagen decorativa lateral -->
+                <div class="relative h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl group">
+                     <img src="arfreco.png" 
+                     alt="Filosofía Berry Go" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                     <div class="absolute inset-0 bg-gradient-to-t from-berryBlue/90 to-transparent flex items-end p-8">
+                        <p class="text-white font-medium text-lg border-l-4 border-berryGreen pl-4">"Calidad que se nota en cada empaque."</p>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Misión y Visión (Cards lado a lado) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in-section">
+                <!-- Misión -->
+                <div class="group relative bg-white p-8 rounded-3xl shadow-lg border-l-8 border-berryGreen hover:-translate-y-2 transition duration-300 overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 text-9xl text-berryGreen font-serif font-bold leading-none select-none z-0">"</div>
+                    <h3 class="text-2xl font-bold text-berryBlue mb-4 flex items-center relative z-10">
+                        <span class="w-8 h-8 rounded-full bg-berryGreen/10 flex items-center justify-center mr-3 text-berryGreen">
+                            <i class="fas fa-mountain"></i>
+                        </span>
+                        Misión
+                    </h3>
+                    <p class="text-gray-600 relative z-10 leading-relaxed">
+                        Ofrecer arándanos frescos de alta calidad, accesibles y listos para el consumo, promoviendo hábitos saludables de manera simple, práctica y confiable.
+                    </p>
+                </div>
+
+                <!-- Visión -->
+                <div class="group relative bg-white p-8 rounded-3xl shadow-lg border-l-8 border-berryRed hover:-translate-y-2 transition duration-300 overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 text-9xl text-berryRed font-serif font-bold leading-none select-none z-0">"</div>
+                    <h3 class="text-2xl font-bold text-berryBlue mb-4 flex items-center relative z-10">
+                        <span class="w-8 h-8 rounded-full bg-berryRed/10 flex items-center justify-center mr-3 text-berryRed">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        Visión
+                    </h3>
+                    <p class="text-gray-600 relative z-10 leading-relaxed">
+                        Convertir a Berry Go en una marca reconocida en Bogotá y Colombia como referente de fruta premium saludable, siendo el proveedor más confiable para hogares y negocios.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRODUCTOS (Presentaciones) -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-berryBlue mb-4">Elige tu presentación ideal</h2>
+                <p class="text-gray-500">Opciones pensadas para cada momento de tu día.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card 200g -->
+                <div class="product-card bg-white rounded-3xl p-8 border border-gray-100 flex flex-col fade-in-section">
+                    <div class="flex-grow">
+                        <div class="text-gray-400 font-bold tracking-widest text-xs uppercase mb-2">Personal</div>
+                        <div class="text-5xl font-bold text-berryBlue mb-2">200g</div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Snack Diario</h3>
+                        <ul class="text-gray-500 space-y-3 mb-8 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Lonchera saludable</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Media mañana</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Fácil de llevar</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/573103285950?text=Hola,%20me%20interesa%20la%20presentación%20de%20200g" 
+                       class="w-full block text-center border-2 border-berryGreen text-berryGreen font-bold py-3 rounded-xl hover:bg-berryGreen hover:text-white transition-colors">
+                       Consultar Precio
+                    </a>
+                </div>
+
+                <!-- Card 500g (Destacada) -->
+                <div class="product-card bg-white rounded-3xl p-8 border-2 border-berryBlue flex flex-col relative transform md:-translate-y-4 shadow-xl fade-in-section">
+                    <div class="absolute top-0 right-0 bg-berryBlue text-white text-xs font-bold px-4 py-2 rounded-bl-xl rounded-tr-xl">
+                        MÁS VENDIDO
+                    </div>
+                    <div class="flex-grow">
+                        <div class="text-berryRed font-bold tracking-widest text-xs uppercase mb-2">Favorito</div>
+                        <div class="text-6xl font-bold text-berryBlue mb-2">500g</div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Uso Frecuente</h3>
+                        <ul class="text-gray-500 space-y-3 mb-8 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-berryBlue mr-2"></i> Ideal para batidos</li>
+                            <li class="flex items-center"><i class="fas fa-check text-berryBlue mr-2"></i> Topping para yogurt</li>
+                            <li class="flex items-center"><i class="fas fa-check text-berryBlue mr-2"></i> Desayunos completos</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/573103285950?text=Hola,%20me%20interesa%20la%20presentación%20de%20500g" 
+                       class="w-full block text-center bg-berryBlue text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition-colors shadow-lg hover:shadow-blue-200">
+                       Pedir Ahora
+                    </a>
+                </div>
+
+                <!-- Card 1000g -->
+                <div class="product-card bg-white rounded-3xl p-8 border border-gray-100 flex flex-col fade-in-section">
+                    <div class="flex-grow">
+                        <div class="text-gray-400 font-bold tracking-widest text-xs uppercase mb-2">Familiar</div>
+                        <div class="text-5xl font-bold text-berryBlue mb-2">1000g</div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Hogar y Negocio</h3>
+                        <ul class="text-gray-500 space-y-3 mb-8 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Alto rendimiento</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Repostería</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Consumo familiar</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/573103285950?text=Hola,%20me%20interesa%20la%20presentación%20de%201000g" 
+                       class="w-full block text-center border-2 border-berryGreen text-berryGreen font-bold py-3 rounded-xl hover:bg-berryGreen hover:text-white transition-colors">
+                       Consultar Precio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SALUD -->
+    <section class="py-20 bg-blue-50 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 fade-in-section">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-berryGreen rounded-full opacity-20 blur-xl"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-berryRed rounded-full opacity-20 blur-xl"></div>
+                        <img src="arjugo.png" 
+                             alt="Bowl saludable Berry Go" class="rounded-3xl shadow-xl w-full relative z-10 rotate-1 hover:rotate-0 transition duration-500">
+                    </div>
+                </div>
+                <div class="md:w-1/2 fade-in-section">
+                    <span class="text-berryGreen font-bold tracking-widest uppercase text-sm">Bienestar</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-berryBlue mt-2 mb-6">Salud sin complicaciones</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        No somos solo fruta. Somos tu dosis diaria de energía. Los arándanos son conocidos por su alto poder antioxidante y su capacidad para mejorar la concentración.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <i class="fas fa-heart text-berryRed mb-2 text-xl"></i>
+                            <p class="font-bold text-gray-700">Cardiovascular</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <i class="fas fa-brain text-berryBlue mb-2 text-xl"></i>
+                            <p class="font-bold text-gray-700">Memoria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO DE COMPRA -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-berryBlue mb-16 fade-in-section">¿Cómo tener tus Berry Go?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative max-w-5xl mx-auto">
+                <!-- Línea conectora (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-20 right-20 h-1 bg-gray-100 -z-10"></div>
+
+                <!-- Paso 1 -->
+                <div class="bg-white p-6 fade-in-section">
+                    <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-berryGreen text-3xl font-bold shadow-sm">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800">1. Escríbenos</h4>
+                    <p class="text-gray-500">Sin registros ni apps extrañas. Directo a nuestro WhatsApp.</p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="bg-white p-6 fade-in-section" style="transition-delay: 100ms;">
+                    <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-berryGreen text-3xl font-bold shadow-sm">
+                        <i class="fas fa-basket-shopping"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800">2. Elige</h4>
+                    <p class="text-gray-500">Confirma la cantidad que necesitas para tu semana.</p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="bg-white p-6 fade-in-section" style="transition-delay: 200ms;">
+                    <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-berryGreen text-3xl font-bold shadow-sm">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800">3. Recibe</h4>
+                    <p class="text-gray-500">Coordinamos la entrega y disfrutas en casa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-24 bg-berryGreen relative overflow-hidden text-center">
+        <!-- Decoración de fondo -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 fade-in-section">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Empieza a comer mejor hoy</h2>
+            <p class="text-green-100 text-xl mb-10 max-w-2xl mx-auto">
+                Calidad de exportación a precios locales. Pide ahora y recibe frescura garantizada.
+            </p>
+            <a href="https://wa.me/573103285950?text=Hola,%20estoy%20listo%20para%20hacer%20mi%20pedido%20de%20Berry%20Go" target="_blank"
+               class="inline-flex items-center bg-white text-berryGreen hover:bg-gray-100 font-bold py-5 px-10 rounded-full text-xl shadow-2xl transition duration-300 transform hover:scale-105">
+               <i class="fab fa-whatsapp mr-3 text-2xl"></i> 
+               Hacer Pedido: 310 328 5950
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <div class="flex items-center gap-2 mb-6">
+                <div class="text-berryBlue text-xl">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="text-2xl font-bold text-white tracking-tight">
+                    Berry Go
+                </div>
+            </div>
+            
+            <div class="flex space-x-8 mb-8">
+                <a href="https://www.instagram.com/berrygo_co?igsh=eDNtcWVsdnRlMmtu" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-berryBlue transition-colors text-white">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="https://wa.me/573103285950" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-berryGreen transition-colors text-white">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+            
+            <div class="text-center text-gray-500 text-sm">
+                <p class="mb-2">Bogotá – Colombia</p>
+                <p>&copy; 2024 Berry Go. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script src="berry.js"></script>
+</body>
+</html>
